@@ -1,7 +1,7 @@
 namespace :dev do
   task :fetck_city => :environment do             #获取城市 => 通过外界
     puts "Fetch city data..."
-    response = RestClient.get "http://v.juhe.cn/weather/citys", :params => { :key => "93ab6eb51049059848f3f06f2b9e16df"}   # GET请求的地址，以及密匙key
+    response = RestClient.get "http://v.juhe.cn/weather/citys", :params => { :key => JUHE_CONFIG["api_key"]}   # GET请求的地址，以及密匙key
     data = JSON.parse(response.body)       #请求获取后的JSON格式资料，全部解析并存为"date"
 
     data["result"].each do |c|             #整理资料并存入数据库
