@@ -1,0 +1,2 @@
+class Toutiao < ApplicationRecord
+end

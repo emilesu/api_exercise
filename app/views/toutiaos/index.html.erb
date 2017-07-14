@@ -1,0 +1,17 @@
+<table class="table">
+
+  <tr>
+    <th>标题</th>
+    <th>分类</th>
+    <th>图片</th>
+  </tr>
+
+  <% @toutiaos.each do |toutiao| %>
+  <tr>
+    <td><%= link_to(toutiao.title, toutiao.url) %></td>
+    <td><%= toutiao.category %></td>
+    <td><%= image_tag(toutiao.thumbnail_pic_s) %></td>
+  </tr>
+  <% end %>
+
+</table>

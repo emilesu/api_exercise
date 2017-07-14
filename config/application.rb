@@ -18,3 +18,4 @@ module ApiExercise
 end
 
 JUHE_CONFIG = Rails.application.config_for(:juhe)
+JUHE_TOUTIAO_CONFIG = Rails.application.config_for(:juhe_toutiao)
