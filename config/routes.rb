@@ -21,6 +21,7 @@ Rails.application.routes.draw do
       post "/reservations" => "reservations#create", :as => :create_reservations
       patch "/reservations/:booking_code" => "reservations#update", :as => :update_reservation
       delete "/reservations/:booking_code" => "reservations#destroy", :as => :cancel_reservation
+      get "/reservations" => "reservations#index", :as => :reservations  #查询所有我的订票
     end
   end
 
